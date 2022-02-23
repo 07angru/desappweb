@@ -21,7 +21,7 @@ return new class extends Migration
             $table->string('password');
             $table->string('phone');
             $table->string('alias');
-            $table->string('image');
+            $table->string('imagen');
             $table->rememberToken();
             $table->timestamps();
         });
