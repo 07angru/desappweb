@@ -1,0 +1,62 @@
+@extends('dash.layouts.main')
+@section('contenido')
+    <div class="container-fluid">
+        <!-- Page Heading -->
+        <div class="d-sm-flex align-items-center justify-content-between mb-4">
+            <h1 class="h3 mb-0 text-gray-800">Productos</h1>
+            <a href="#" data-toggle="modal" data-target="#modalAdd" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                    class="fas fa-upload fa-sm text-white-50"></i> Agregar Producto</a>
+        </div>
+
+    </div>
+    <!-- MODAL AGREGAR -->
+    <div class="modal" tabindex="-1" role="dialog" id="modalAdd">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Agregar Producto</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              <div class="form-group">
+                  <label for="">Nombre</label>
+                  <input type="text" class="form-control" placeholder="Nombre del producto">
+              </div>
+              <div class="form-group">
+                  <label for="">Descripción</label>
+                  <input type="text" class="form-control" placeholder="Descripción">
+              </div>
+              <div class="form-group">
+                  <label for="">Precio Base</label>
+                  <input type="number" class="form-control" placeholder="Precio Base">
+              </div>
+              <div class="form-group">
+                  <label for="">Imagen</label>
+                  <input type="file" class="form-control">
+              </div>
+              <div class="form-group">
+                  <label for="">Blockchain Type</label>
+                  <select name="" id="" class="form-control">
+                      <option value="Etherium">Etherium</option>
+                      <option value="Polygon">Polygon</option>
+                      <option value="Klaytn">Klaytn</option>
+                  </select>
+              </div>
+              <div class="form-group">
+                  <label for="">Categoría</label>
+                  <select name="" id="" class="form-control">
+                  </select>
+              </div>
+
+              
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancelar</button>
+              <button type="button" class="btn btn-primary"> <i class="fa fa-save"></i> Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+@endsection

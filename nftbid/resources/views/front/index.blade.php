@@ -1,5 +1,3 @@
-@extends('front.layouts.main')
-
 @extends('front.layouts.main',['title'=>'NftsBids Shop'])
 
 @section('contenido')

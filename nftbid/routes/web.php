@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Dash\ProductosController;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +18,12 @@ Route::get('/', function () {
     return view('front.index');
 });
 
+Route::get('/admin', function () {
+    return view('dash.index');
+});
+
+Route::get('/admin/productos',[ProductosController::class, 'miFuncion'] );
+
 Route::get('/contacto',function(){
     echo "HOLA ESTAS EN CONTACTO";
 });
@@ -31,3 +38,7 @@ Route::get('/productos',function(){
         ->with('usuario', $usuario)
         ->with('numero', $num);
 });
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
